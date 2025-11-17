@@ -9,7 +9,7 @@ const MasterLayout = ({ children }) => {
   let [sidebarActive, seSidebarActive] = useState(false);
   let [mobileMenu, setMobileMenu] = useState(false);
   const location = useLocation();
-  const { i18n } = useTranslation();
+  const { i18n,t } = useTranslation();
    const handleLanguageChange = (lang) => {
     i18n.changeLanguage(lang);
     document.body.dir = lang === "ar" ? "rtl" : "ltr";
